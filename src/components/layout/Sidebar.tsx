@@ -1,6 +1,6 @@
 import {
     ChartNoAxesColumn,
-    LayoutDashboard,
+    PanelsTopLeft,
     LayersPlus,
     Search,
     Zap,
@@ -16,7 +16,7 @@ import {
 const navigationItems = [
     {
         label: 'Dashboard',
-        icon: LayoutDashboard,
+        icon: PanelsTopLeft,
         active: true,
     },
     {
@@ -25,7 +25,7 @@ const navigationItems = [
     },
     {
         label: 'Lists',
-        icon: LayoutDashboard,
+        icon: PanelsTopLeft,
     },
     {
         label: 'Templates',
@@ -92,7 +92,7 @@ function Sidebar() {
                                     <span className="absolute left-0 top-1/2 h-6 w-1 -translate-y-1/2 rounded-r bg-[#0A9B94]" />
                                 )}
                                 <Icon className="h-4 w-4 shrink-0" />
-                                <span>{item.label}</span>
+                                <span className="font-medium">{item.label}</span>
                                 {item.label === 'Inbox' && (
                                     <span className="ml-auto flex h-5 min-w-5 items-center justify-center rounded-sm bg-[#F9BB06] px-1 text-[10px] font-bold text-white">
                                         24
