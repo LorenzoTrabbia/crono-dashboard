@@ -1,4 +1,5 @@
 import RepliesCard from "../dashboard/RepliesCard";
+import TodaysTasks from "../dashboard/TodaysTasks";
 import WelcomeCard from "../dashboard/WelcomeCard";
 import Sidebar from "./Sidebar";
 
@@ -23,8 +24,8 @@ function DashboardLayout() {
                     </div>
 
                     {/* Today's Tasks */}
-                    <div className="min-h-29.5 min-w-0 rounded-xl border border-slate-200 bg-white">
-                        {/* Today's Tasks */}
+                    <div className="min-w-0">
+                        <TodaysTasks />
                     </div>
 
                     {/* Signals */}
