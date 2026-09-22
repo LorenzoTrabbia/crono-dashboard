@@ -1,10 +1,10 @@
+import Sidebar from "./Sidebar";
+
 function DashboardLayout() {
     return (
         <div className="min-h-screen">
             {/* Sidebar */}
-            <aside className="fixed inset-y-0 left-0 w-48 border-r border-slate-200 bg-white">
-                {/* Sidebar content */}
-            </aside>
+            <Sidebar />
 
             {/* Content */}
             <main className="ml-48 min-h-screen px-4 pb-4 pt-2">
