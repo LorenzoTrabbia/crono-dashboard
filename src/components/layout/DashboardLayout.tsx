@@ -1,5 +1,7 @@
+import OnboardingCard from "../dashboard/OnboardingCard";
+import PerformanceCard from "../dashboard/PerformanceCard";
 import RepliesCard from "../dashboard/RepliesCard";
-import TodaysTasks from "../dashboard/TodaysTasks";
+import TodaysTasksCard from "../dashboard/TodaysTasksCard";
 import WelcomeCard from "../dashboard/WelcomeCard";
 import Sidebar from "./Sidebar";
 
@@ -19,13 +21,13 @@ function DashboardLayout() {
                     </div>
 
                     {/* Performance */}
-                    <div className="row-span-2 min-w-0 rounded-xl border border-slate-200 bg-white">
-                        {/* Performance */}
+                    <div className="row-span-2 min-w-0">
+                        <PerformanceCard />
                     </div>
 
                     {/* Today's Tasks */}
                     <div className="min-w-0">
-                        <TodaysTasks />
+                        <TodaysTasksCard />
                     </div>
 
                     {/* Signals */}
@@ -34,8 +36,8 @@ function DashboardLayout() {
                     </div>
 
                     {/* Onboarding */}
-                    <div className="min-h-82.5 min-w-0 rounded-xl border border-slate-200 bg-white">
-                        {/* Onboarding */}
+                    <div className="min-w-0">
+                        <OnboardingCard />
                     </div>
                 </div>
             </main>

@@ -30,7 +30,7 @@ const taskGroups = [
     ],
 ];
 
-function TodaysTasks() {
+function TodaysTasksCard() {
     return (
         <div className="rounded-xl border border-[#e4eaf1] bg-white p-3">
             <div className="flex items-center justify-between px-1">
@@ -82,4 +82,4 @@ function TodaysTasks() {
     );
 }
 
-export default TodaysTasks
+export default TodaysTasksCard
