@@ -1,31 +1,5 @@
 import { ChevronRight, Mailbox } from 'lucide-react';
-import amazonIcon from '../../assets/icons/amazon.png';
-import mIcon from '../../assets/icons/m.png';
-import mcdonaldIcon from '../../assets/icons/mcdonald.png';
-import redditIcon from '../../assets/icons/reddit.png';
-
-const avatars = [
-    {
-        src: redditIcon,
-        alt: 'Reddit',
-        imageClassName: '',
-    },
-    {
-        src: amazonIcon,
-        alt: 'Amazon',
-        imageClassName: '',
-    },
-    {
-        src: mcdonaldIcon,
-        alt: 'McDonald\'s',
-        imageClassName: 'p-1',
-    },
-    {
-        src: mIcon,
-        alt: 'M',
-        imageClassName: '',
-    },
-];
+import { avatars } from '../../data/replies';
 
 function RepliesCard() {
     return (
