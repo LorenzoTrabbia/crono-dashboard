@@ -30,3 +30,17 @@ export type OnboardingItem = {
 	icon: LucideIcon;
 	iconClassName: string;
 };
+
+export type Signal = {
+	id: string;
+	actor: string;
+	description: string;
+	descriptionHighlight: string;
+	descriptionAfterHighlight?: string;
+	descriptionHighlightClassName: string;
+	category: string;
+	categoryClassName: string;
+	tag?: string;
+	date: string;
+	avatar: string;
+};

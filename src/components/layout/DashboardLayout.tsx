@@ -1,6 +1,7 @@
 import OnboardingCard from "../dashboard/OnboardingCard";
 import PerformanceCard from "../dashboard/PerformanceCard";
 import RepliesCard from "../dashboard/RepliesCard";
+import SignalsCard from "../dashboard/SignalsCard";
 import TodaysTasksCard from "../dashboard/TodaysTasksCard";
 import WelcomeCard from "../dashboard/WelcomeCard";
 import Sidebar from "./Sidebar";
@@ -31,8 +32,8 @@ function DashboardLayout() {
                     </div>
 
                     {/* Signals */}
-                    <div className="min-h-82.5 min-w-0 rounded-xl border border-slate-200 bg-white">
-                        {/* Signals */}
+                    <div className="min-w-0">
+                        <SignalsCard />
                     </div>
 
                     {/* Onboarding */}
