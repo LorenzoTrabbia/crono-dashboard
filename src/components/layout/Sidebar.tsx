@@ -108,7 +108,7 @@ function Sidebar() {
 
                 {/* Trial notice */}
                 <div className="relative mx-1 mb-3 overflow-hidden rounded-md bg-[#FFF4CC] px-2 py-2">
-                    <p className="relative z-10 text-[16px] font-medium text-slate-800">
+                    <p className="relative z-10 text-[14px] font-medium text-slate-800">
                         Trial ends in 2 days
                     </p>
                     <button

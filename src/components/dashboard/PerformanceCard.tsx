@@ -37,7 +37,7 @@ function PerformanceCard() {
                                 )}
                             </div>
 
-                            <div className="mt-2 flex items-center gap-1 text-[14px] leading-none">
+                            <div className="mt-2 flex items-center gap-1 text-[14px] leading-none font-medium">
                                 <Icon
                                     className="h-4 w-4 shrink-0"
                                     style={{ color: kpi.color }}

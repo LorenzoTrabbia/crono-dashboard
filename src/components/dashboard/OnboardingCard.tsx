@@ -2,12 +2,12 @@ import { onboardingItems } from '../../data/onboarding';
 
 function OnboardingCard() {
     return (
-        <div className="rounded-xl border border-[#e4eaf1] bg-white p-3">
+        <div className="flex h-full flex-col rounded-xl border border-[#e4eaf1] bg-white p-3">
             <h2 className="px-1 text-[13px] font-semibold text-[#0f1f3d]">
                 Onboarding
             </h2>
 
-            <div className="mt-1">
+            <div className="mt-1 flex min-h-0 flex-1 flex-col">
                 {onboardingItems.map((item, index) => {
                     const Icon = item.icon;
 
@@ -15,7 +15,7 @@ function OnboardingCard() {
                         <div
                             key={item.label}
                             className={[
-                                'flex h-15.5 items-center gap-3 px-1',
+                                'flex min-h-15.5 flex-1 items-center gap-3 px-1',
                                 index > 0 ? 'border-t border-[#e4eaf1]' : '',
                             ].join(' ')}
                         >

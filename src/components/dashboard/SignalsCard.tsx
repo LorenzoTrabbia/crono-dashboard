@@ -1,44 +1,18 @@
-import { useEffect, useRef, useState } from 'react';
 import SignalItem from './SignalItem';
-import { signals } from '../../data/signals';
+import useSignals from '../../hooks/useSignals';
 
 function SignalsCard() {
-    const [visibleSignals, setVisibleSignals] = useState(signals);
-    const [activeSignalId, setActiveSignalId] = useState<string | null>(null);
-    const actionContainerRef = useRef<HTMLDivElement>(null);
-
-    useEffect(() => {
-        if (!activeSignalId) {
-            return;
-        }
-
-        const handleOutsidePointerDown = (event: PointerEvent) => {
-            if (!actionContainerRef.current?.contains(event.target as Node)) {
-                setActiveSignalId(null);
-            }
-        };
-
-        document.addEventListener('pointerdown', handleOutsidePointerDown);
-
-        return () => {
-            document.removeEventListener('pointerdown', handleOutsidePointerDown);
-        };
-    }, [activeSignalId]);
-
-    const removeActiveSignal = () => {
-        if (!activeSignalId) {
-            return;
-        }
-
-        setVisibleSignals((currentSignals) =>
-            currentSignals.filter((signal) => signal.id !== activeSignalId),
-        );
-        setActiveSignalId(null);
-    };
+    const {
+        visibleSignals,
+        activeSignalId,
+        actionContainerRef,
+        openSignalActions,
+        removeActiveSignal,
+    } = useSignals();
 
     return (
         <>
-            <div className="flex h-90 flex-col overflow-hidden rounded-xl border border-[#e4eaf1] bg-white">
+            <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-xl border border-[#e4eaf1] bg-white">
                 <div className="px-3 py-2">
                     <div className="flex items-center gap-2">
                         <h2 className="text-[13px] font-semibold text-[#0f1f3d]">Signals</h2>
@@ -55,7 +29,7 @@ function SignalsCard() {
                         <SignalItem
                             key={signal.id}
                             signal={signal}
-                            onAction={() => setActiveSignalId(signal.id)}
+                            onAction={() => openSignalActions(signal.id)}
                             actionOpen={activeSignalId === signal.id}
                             onComplete={removeActiveSignal}
                             onDelete={removeActiveSignal}
