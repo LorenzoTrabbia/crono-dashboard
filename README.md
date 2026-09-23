@@ -46,7 +46,7 @@ src/
 
 - **Signals interaction**: clicking "Action" opens a small menu with **Complete** and **Delete**. Both options resolve the signal and decrease the unread counter (`useSignals` hook), since the assignment only specified the counter behavior and not a visual distinction between the two outcomes.
 - **Data**: signals, KPIs, tasks, and onboarding steps are static mock data (`src/data`), simulating what would normally come from an API.
-- **Layout**: the dashboard uses a full-height viewport grid. As a trade-off of that choice, the Signals and Onboarding cards stretch slightly taller than their content when there are few items, introducing a small vertical spacing difference versus the Figma file (which sizes those cards to their natural content height). An alternative approach — letting all cards size to content and allowing the page to scroll — would match the Figma spacing more closely, at the cost of a fixed, no-scroll dashboard feel.
+- **Layout**: the dashboard uses a full-height viewport grid. As a trade-off of that choice, the Signals and Onboarding cards stretch slightly taller than their content when there are few items, introducing a small vertical spacing difference versus the Figma file (which sizes those cards to their natural content height). This is most visible at the Figma's reference resolution (1440x750); on larger screens, the stretch becomes more pronounced, since the grid keeps filling the full viewport height regardless of content. An alternative approach - letting all cards size to content and allowing the page to scroll - would match the Figma spacing more closely at any resolution, at the cost of a fixed, no-scroll dashboard feel.
 - **Icons**: icons are from Lucide React.
 
 ## What I'd Do With More Time
